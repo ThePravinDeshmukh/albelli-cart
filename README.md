@@ -60,6 +60,8 @@ query{order(id: 1)
 } 
 ```
 
+![](img/getOrder.jpg)
+
 or pass query as argument to /graphql endpoint
 ``` http://localhost:5000/graphql?query={order(id:1){id,orderLine{productType,quantity}requiredBinWidth}} ```
 
@@ -96,6 +98,8 @@ and add query variables
 }
 ```
 
+![](img/createOrder.jpg)
+
 The JSON request for this mutation would look like:
 ```
 {
@@ -121,6 +125,6 @@ mutation ($orderlines:[OrderLine]!){ createOrder(orderlines: $orderlines) { id, 
 
 ### Run Image
 
-```docker run -p 5000:80 albellicart```
+```docker run -it --rm -p 80:5000 --name albellicartcontainer albellicart```
 
 

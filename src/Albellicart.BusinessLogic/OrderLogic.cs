@@ -27,12 +27,10 @@ namespace Albellicart.BusinessLogic
         {
             Order order = new Order
             {
-                OrderLine = orderLines
+                OrderLine = orderLines.ToList()
             };
 
             SetRequiredBinWidth(order);
-
-            SetId(order);
 
             return _orderRepository.AddOrder(order);
         }

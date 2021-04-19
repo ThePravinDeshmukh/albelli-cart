@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,25 +8,37 @@ namespace Albellicart.Models.Repository
 {
     public class OrderRepository : IOrderRepository
     {
-
-        private static List<Order> Orders = new List<Order>();
         public OrderRepository()
         {
         }
 
         public IEnumerable<Order> GetOrders()
         {
-            return Orders;
+            using (var context = new AlbellicartContext())
+            {
+                // Note: This sample requires the database to be created before running.
+                return context.Order.Include(b => b.OrderLine).ToList();
+            }
         }
         public Order GetOrder(int id)
         {
-            return Orders.FirstOrDefault(x => x.Id == id);
+            using (var context = new AlbellicartContext())
+            {
+                // Note: This sample requires the database to be created before running.
+                return context.Order.Include(b => b.OrderLine).FirstOrDefault(x => x.Id == id);
+            }
         }
         public Order AddOrder(Order order)
         {
-            Orders.Add(order);
+            using (var context = new AlbellicartContext())
+            {
+                // Note: This sample requires the database to be created before running.
+                context.Order.Add(order);
+                context.SaveChanges();
 
-            return order;
+                return order;
+            }
+
         }
     }
 }
