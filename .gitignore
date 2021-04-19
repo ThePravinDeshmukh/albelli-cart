@@ -21,3 +21,6 @@
 /src/Albellicart.BusinessLogic.Behaviour/bin/Debug/netcoreapp3.1
 /src/Albellicart.Schema/bin/Debug
 /src/Albellicart.BusinessLogic/bin/Debug/netstandard2.1
+/src/Albellicart.Logging/obj
+/src/Albellicart.Logging/obj
+/src/Albellicart.Logging/obj
