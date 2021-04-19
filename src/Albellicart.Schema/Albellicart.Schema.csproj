@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="GraphQL" Version="3.2.0" />
+    <PackageReference Include="System.ComponentModel" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Albellicart.BusinessLogic\Albellicart.BusinessLogic.csproj" />
+    <ProjectReference Include="..\Albellicart.Models\Albellicart.Models.csproj" />
+  </ItemGroup>
+
+</Project>

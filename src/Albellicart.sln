@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albellicart", "Albellicart\Albellicart.csproj", "{AFFE56FF-42A6-4F8F-AD00-92631D9053FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{E6953BE2-145D-4B31-A9BF-2AF8FCE94DE4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{F6611BC7-2637-45C6-954B-32BCE3D8A71A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{5FD47CA7-E402-4618-88B4-8114AB240AE7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9E6C703C-90A1-482A-ABED-EA7244753E92}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		run.sh = run.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schema", "Schema", "{2EDA941D-E1C0-44B8-8EC9-5BDC6F4900D0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albellicart.Schema", "Albellicart.Schema\Albellicart.Schema.csproj", "{8A3AF30A-7517-4FBF-BC4D-246068A48591}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albellicart.Models", "Albellicart.Models\Albellicart.Models.csproj", "{595D4B69-9444-4442-A04B-C15ACF7588BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albellicart.Behaviour", "Albellicart.Behaviour\Albellicart.Behaviour.csproj", "{4DEE7F15-3C4B-4B19-967C-F65108802D2C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albellicart.Models.Behaviour", "Albellicart.Models.Behaviour\Albellicart.Models.Behaviour.csproj", "{B52B5BD2-CC21-4FEF-8B2B-C9D62983C572}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albellicart.BusinessLogic", "Albellicart.BusinessLogic\Albellicart.BusinessLogic.csproj", "{A34A669C-E0EB-4353-AFA0-256018744B0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albellicart.BusinessLogic.Behaviour", "Albellicart.BusinessLogic.Behaviour\Albellicart.BusinessLogic.Behaviour.csproj", "{406701F7-F46C-482B-9F7C-6D1105BF4C82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFFE56FF-42A6-4F8F-AD00-92631D9053FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFFE56FF-42A6-4F8F-AD00-92631D9053FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFFE56FF-42A6-4F8F-AD00-92631D9053FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFFE56FF-42A6-4F8F-AD00-92631D9053FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A3AF30A-7517-4FBF-BC4D-246068A48591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A3AF30A-7517-4FBF-BC4D-246068A48591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A3AF30A-7517-4FBF-BC4D-246068A48591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A3AF30A-7517-4FBF-BC4D-246068A48591}.Release|Any CPU.Build.0 = Release|Any CPU
+		{595D4B69-9444-4442-A04B-C15ACF7588BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{595D4B69-9444-4442-A04B-C15ACF7588BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{595D4B69-9444-4442-A04B-C15ACF7588BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{595D4B69-9444-4442-A04B-C15ACF7588BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DEE7F15-3C4B-4B19-967C-F65108802D2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DEE7F15-3C4B-4B19-967C-F65108802D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DEE7F15-3C4B-4B19-967C-F65108802D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DEE7F15-3C4B-4B19-967C-F65108802D2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B52B5BD2-CC21-4FEF-8B2B-C9D62983C572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B52B5BD2-CC21-4FEF-8B2B-C9D62983C572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B52B5BD2-CC21-4FEF-8B2B-C9D62983C572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B52B5BD2-CC21-4FEF-8B2B-C9D62983C572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A34A669C-E0EB-4353-AFA0-256018744B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A34A669C-E0EB-4353-AFA0-256018744B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A34A669C-E0EB-4353-AFA0-256018744B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A34A669C-E0EB-4353-AFA0-256018744B0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{406701F7-F46C-482B-9F7C-6D1105BF4C82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{406701F7-F46C-482B-9F7C-6D1105BF4C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{406701F7-F46C-482B-9F7C-6D1105BF4C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{406701F7-F46C-482B-9F7C-6D1105BF4C82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AFFE56FF-42A6-4F8F-AD00-92631D9053FD} = {5FD47CA7-E402-4618-88B4-8114AB240AE7}
+		{8A3AF30A-7517-4FBF-BC4D-246068A48591} = {2EDA941D-E1C0-44B8-8EC9-5BDC6F4900D0}
+		{595D4B69-9444-4442-A04B-C15ACF7588BC} = {F6611BC7-2637-45C6-954B-32BCE3D8A71A}
+		{4DEE7F15-3C4B-4B19-967C-F65108802D2C} = {5FD47CA7-E402-4618-88B4-8114AB240AE7}
+		{B52B5BD2-CC21-4FEF-8B2B-C9D62983C572} = {F6611BC7-2637-45C6-954B-32BCE3D8A71A}
+		{A34A669C-E0EB-4353-AFA0-256018744B0A} = {E6953BE2-145D-4B31-A9BF-2AF8FCE94DE4}
+		{406701F7-F46C-482B-9F7C-6D1105BF4C82} = {E6953BE2-145D-4B31-A9BF-2AF8FCE94DE4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE6E4A8D-E133-45CF-8FED-74954A616F51}
+	EndGlobalSection
+EndGlobal
