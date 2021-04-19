@@ -15,7 +15,6 @@ namespace Albellicart.Schema.Types
         {
             Name = "OrderLine";
 
-            //Field(f => f.OrderLine, nullable: false, type: typeof(ListGraphType<OrderLineType>));
             Field(f => f.ProductType, nullable: false, type: typeof(ProductTypeEnum)).Description("Product Type in Order");
             Field(f => f.Quantity, nullable: false).Description("Product Quantity in Order");
         }

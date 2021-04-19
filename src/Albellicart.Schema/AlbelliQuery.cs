@@ -16,7 +16,6 @@ namespace Albellicart.Schema
             // Query for getting all orders
             Field<ListGraphType<OrderType>>("orders", resolve: context => orderRepository.GetOrders());
 
-
             // Query for getting an order
             Field<OrderType>(
                 "order",
@@ -26,15 +25,6 @@ namespace Albellicart.Schema
                 resolve: context => orderRepository.GetOrder(context.GetArgument<int>("id"))
             );
 
-            //Func<IResolveFieldContext, string, object> func = (context, id) => data.GetDroidByIdAsync(id);
-
-            //FieldDelegate<DroidType>(
-            //    "droid",
-            //    arguments: new QueryArguments(
-            //        new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "id", Description = "id of the droid" }
-            //    ),
-            //    resolve: func
-            //);
         }
     }
 }

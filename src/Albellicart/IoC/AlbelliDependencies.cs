@@ -15,6 +15,7 @@ namespace Albellicart.IoC
         public static void Map(IServiceCollection services)
         {
             services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IOrderLogic, OrderLogic>();
         }
     }

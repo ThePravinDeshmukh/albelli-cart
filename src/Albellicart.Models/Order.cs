@@ -9,6 +9,6 @@ namespace Albellicart.Models
 
         public IEnumerable<OrderLine> OrderLine { get; set; }
 
-        public int RequiredBinWidth { get; set; }
+        public double RequiredBinWidth { get; set; }
     }
 }

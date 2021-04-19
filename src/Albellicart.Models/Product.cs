@@ -8,7 +8,7 @@ namespace Albellicart.Models
     {
         public ProductType ProductType { get; set; }
 
-        public int WidthInmm { get; set; }
+        public double WidthInmm { get; set; }
         public int WidthFactor { get; set; }
     }
 }
