@@ -11,13 +11,14 @@ namespace Albellicart.Schema
     /// <example>
     /// This is an example JSON request for a mutation
     /// {
-    ///   "query": "mutation ($human:HumanInput!){ createOrder(human: $human) { id name } }",
+    ///   "query": "mutation ($orderlines:[OrderLine]!) { createOrder(orderlines: $orderlines) { id, requiredBinWidth, orderLine {productType, quantity } } }",
     ///   "variables": {
-    ///     "human": {
-    ///       "name": "Boba Fett"
-    ///     }
-    ///   }
-    /// }
+    ///        "orderlines": [
+    ///        { "productType": "PHOTO_BOOK","quantity": 13},
+    ///        { "productType": "CALENDAR","quantity": 2},
+    ///        { "productType": "MUG","quantity": 7}
+    ///        ]
+    ///    }
     /// </example>
     public class AlbelliMutation : ObjectGraphType
     {
