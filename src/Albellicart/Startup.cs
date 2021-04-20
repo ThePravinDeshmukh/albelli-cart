@@ -1,4 +1,5 @@
 using Albellicart.IoC;
+using Albellicart.Models;
 using Albellicart.Schema;
 using GraphQL.Server;
 using GraphQL.Types;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -31,6 +33,8 @@ namespace Albellicart
         {
             GraphQlDependencies.Map(services);
             AlbelliDependencies.Map(services);
+
+            services.AddDbContext<AlbellicartContext>(options => options.UseInMemoryDatabase("Albellicart"));
 
             services.AddControllers();
 

@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Albellicart.BusinessLogic\Albellicart.BusinessLogic.csproj" />
+    <ProjectReference Include="..\Albellicart.Models\Albellicart.Models.csproj" />
     <ProjectReference Include="..\Albellicart.Schema\Albellicart.Schema.csproj" />
   </ItemGroup>
 
