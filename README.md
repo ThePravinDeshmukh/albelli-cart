@@ -131,7 +131,7 @@ The JSON request for this mutation would look like:
 You can generate coverage report for solution and view in html
 
 Run
-```coverage\generate-coverage.bat```
+```coverage\generate-report.bat```
 
 This will 
 
@@ -148,7 +148,7 @@ You can run Web API on target as Windows or in Docker container.
     Required - Docker Engine Installed https://docs.docker.com/engine/install/
 
 Run
-```run\run-docker.bat```
+```run-api\via-docker.bat```
 
 ## Windows 
 Prerequisite
@@ -156,6 +156,6 @@ Prerequisite
 	Required - Dotnet Core 3.1 SDK  https://dotnet.microsoft.com/download/dotnet/3.1
 	Optional - Visual Studio 2019  https://visualstudio.microsoft.com/vs/
 Run
-```run\run-windows.bat```
+```run-api\via-dotnet-cli.bat```
 
  
