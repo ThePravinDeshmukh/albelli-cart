@@ -13,7 +13,7 @@ Confluence - https://techfactor.atlassian.net/l/c/HE5GnM1C
 ## Tech-Stack
 
 | Component        	| Attribute					| Value  	| Status  | Reference |
-| ------------- 	|:-------------:			| -----:	| -----: | -----: |
+| ------------- 	|-------------		| -------------	| ------------- |-------------|
 | Web API | Repository | https://github.com/ThePravinDeshmukh/albelli-cart | Done |  |
 |  | Framework | dotnet 3.1 | Done | https://dotnet.microsoft.com/download/dotnet/3.1 |
 |  | ORM | EF Core | Done | https://docs.microsoft.com/en-us/ef/core/ |
@@ -25,11 +25,9 @@ Confluence - https://techfactor.atlassian.net/l/c/HE5GnM1C
 |  | Code Coverage | Cobertura | Done | https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-code-coverage?tabs=windows |
 |  | Service Discovery | Eureka | NOT STARTED | https://steeltoe.io/service-discovery/get-started/eureka |
 |  | Code Analysis | EnableNETAnalyzers | Done | https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview#code-quality-analysis |
-| Database | Options - | As confirmed, using In-memory SQL for demonstration. | Done | https://docs.microsoft.com/en-us/ef/core/providers/in-memory/?tabs=dotnet-core-cli |
-| Deployment and Runtime | Container | Docker | DONE | Run |
-|  |  |  |  | ```run\run-docker.bat``` |
-|  | Windows | Dotnet core 3.1 runtime | Done | Run |
-|  |  |  |  | ```run\run-windows.bat``` |
+| Database | In-Memory SQL or NoSql | As confirmed, using In-memory SQL for demonstration. | Done | https://docs.microsoft.com/en-us/ef/core/providers/in-memory/?tabs=dotnet-core-cli |
+| Deployment and Runtime | Container | Docker | Done | Run ```run\run-docker.bat``` |
+|  | Windows | Dotnet core 3.1 runtime | Done | Run ```run\run-windows.bat``` |
 
 
 ## GraphQL
@@ -127,7 +125,6 @@ The JSON request for this mutation would look like:
   }
 }
 ```
-mutation ($orderlines:[OrderLine]!){ createOrder(orderlines: $orderlines) { id, requiredBinWidth, orderLine {productType, quantity } } }
 
 # How to Generate Coverage Report
 
@@ -137,6 +134,7 @@ Run
 ```coverage\generate-coverage.bat```
 
 This will 
+
     Run Tests in solution
     Generate coverage report in html
     Open report in browser
@@ -145,7 +143,7 @@ This will
 
 You can run Web API on target as Windows or in Docker container.
 
-##Docker
+## Docker
 
     Required - Docker Engine Installed https://docs.docker.com/engine/install/
 
