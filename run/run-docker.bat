@@ -2,10 +2,13 @@
 
 cd ..\src
 
-docker run --publish 8761:8761 steeltoeoss/eureka-server
+START docker run --publish 8761:8761 steeltoeoss/eureka-server
 
 docker build -t albellicart .
 
-docker run -it --rm -p 5000:5000 --name albellicartcontainer albellicart
+START docker run -it --rm -p 5000:80 --name albellicart albellicart
+
+START http://localhost:5000/ui/playground
+
 
 pause..

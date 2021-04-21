@@ -1,8 +1,9 @@
 
 # Albellicart .NET Core GraphQL API
 
+## Quick Start
 ```
-> ./run.sh
+> run\run-windows.bat
 > browse to http://localhost:3000/ui/playground
 ```
 
@@ -11,6 +12,37 @@ Confluence - https://techfactor.atlassian.net/l/c/HE5GnM1C
 
 ## Tech-Stack
 
+| Component        	| Attribute					| Value  	| Status  | Reference |
+| ------------- 	|:-------------:			| -----:	| -----: | -----: |
+| Web API | Repository | https://github.com/ThePravinDeshmukh/albelli-cart | Done |
+|  | Framework | dotnet 3.1 | Done |
+|  | ORM | EF Core | Done |
+|  | API Querying | GraphQL | Done |
+|  | Logging | ?? | NOT STARTED |
+|  | Tests | XUnit with Moq | In Progress |
+|  |  |  |  |
+|  |  |  | EF Core tests |
+|  |  |  |  |
+|  |  |  | Graphql endpoint tests |
+|  |  |  |  |
+|  | Code Coverage | Cobertura | Done |
+|  | Service Discovery | Eureka | NOT STARTED |
+|  | Code Analysis | EnableNETAnalyzers | Done |
+| Database | Options - | As confirmed, using In-memory for demonstration. | Done |
+|  |  |  |  |
+|  | In-memory SQL |  |  |
+|  |  |  |  |
+|  | NoSql |  |  |
+|  |  |  |  |
+|  |  |  |  |
+| Deployment and Runtime | Container | Docker | DONE |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  | Windows | Dotnet core 3.1 runtime | Done |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
 
 
 ## GraphQL
@@ -136,8 +168,8 @@ Run
 ## Windows 
 Prerequisite
 
-	Required - Dotnet Core 3.1 SDK 
-	Optional - Visual Studio 2019 
+	Required - Dotnet Core 3.1 SDK  https://dotnet.microsoft.com/download/dotnet/3.1
+	Optional - Visual Studio 2019  https://visualstudio.microsoft.com/vs/
 Run
 ```run\run-windows.bat```
 
