@@ -4,7 +4,7 @@
 ## Quick Start
 ```
 > run\run-windows.bat
-> browse to http://localhost:3000/ui/playground
+> browse to http://localhost:5000/ui/playground
 ```
 
 ## Planning & Documentation
@@ -14,35 +14,23 @@ Confluence - https://techfactor.atlassian.net/l/c/HE5GnM1C
 
 | Component        	| Attribute					| Value  	| Status  | Reference |
 | ------------- 	|:-------------:			| -----:	| -----: | -----: |
-| Web API | Repository | https://github.com/ThePravinDeshmukh/albelli-cart | Done |
-|  | Framework | dotnet 3.1 | Done |
-|  | ORM | EF Core | Done |
-|  | API Querying | GraphQL | Done |
-|  | Logging | ?? | NOT STARTED |
-|  | Tests | XUnit with Moq | In Progress |
-|  |  |  |  |
-|  |  |  | EF Core tests |
-|  |  |  |  |
-|  |  |  | Graphql endpoint tests |
-|  |  |  |  |
-|  | Code Coverage | Cobertura | Done |
-|  | Service Discovery | Eureka | NOT STARTED |
-|  | Code Analysis | EnableNETAnalyzers | Done |
-| Database | Options - | As confirmed, using In-memory for demonstration. | Done |
-|  |  |  |  |
-|  | In-memory SQL |  |  |
-|  |  |  |  |
-|  | NoSql |  |  |
-|  |  |  |  |
-|  |  |  |  |
-| Deployment and Runtime | Container | Docker | DONE |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  | Windows | Dotnet core 3.1 runtime | Done |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| Web API | Repository | https://github.com/ThePravinDeshmukh/albelli-cart | Done | |
+|  | Framework | dotnet 3.1 | Done |https://dotnet.microsoft.com/download/dotnet/3.1 |
+|  | ORM | EF Core | Done |https://docs.microsoft.com/en-us/ef/core/ |
+|  | API Querying | GraphQL | Done |https://github.com/graphql-dotnet/graphql-dotnet |
+|  | Logging | ?? | NOT STARTED |https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-3.1 |
+|  | Tests | XUnit with Moq | In Progress |EF Core Testing https://docs.microsoft.com/en-us/ef/core/testing/ |
+|  |  |  | EF Core tests | |
+|  |  |  | Graphql endpoint tests | |
+|  | Code Coverage | Cobertura | Done |https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-code-coverage?tabs=windows |
+|  | Service Discovery | Eureka | NOT STARTED |https://steeltoe.io/service-discovery/get-started/eureka |
+|  | Code Analysis | EnableNETAnalyzers | Done |https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview#code-quality-analysis |
+| Database | Options - | As confirmed, using In-memory for demonstration. | Done |SQL In-Memory https://docs.microsoft.com/en-us/ef/core/providers/in-memory/?tabs=dotnet-core-cli |
+| Deployment and Runtime | Container | Docker | DONE |Run |
+|  |  |  |  |```run\run-docker.bat``` |
+|  | Windows | Dotnet core 3.1 runtime | Done |Run |
+|  |  |  |  |```run\run-windows.bat``` |
+
 
 
 ## GraphQL
