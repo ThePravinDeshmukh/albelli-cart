@@ -11,12 +11,85 @@ namespace Albellicart.BusinessLogic.Tests
 {
     public class OrderLogicTests
     {
-        OrderLogic target;
-        Mock<IOrderLogic> targetMock;
-        Mock<IOrderRepository> orderRepositoryMock;
-        IProductRepository productRepository;
-        Mock<IOrder> orderMock;
-        IOrder order;
+        private readonly OrderLogic target;
+        private readonly Mock<IOrderLogic> targetMock;
+        private readonly Mock<IOrderRepository> orderRepositoryMock;
+        private readonly IProductRepository productRepository;
+        private readonly Mock<IOrder> orderMock;
+        private readonly IOrder order;
+
+        /// <summary>
+        /// This is test data for orders with different combination of Product & their quantities
+        /// You can add more Orders in TestOrderData List with different combination of products and Quantities to cover edge cases.
+        /// </summary>
+        public static IEnumerable<object[]> TestOrderData =>
+            new List<object[]>
+            {
+                new object[] {
+                    137.7,
+                    new Order{
+                        OrderLine =  new List<OrderLine>
+                        {
+                            new OrderLine {ProductType = Models.Enums.ProductType.PhotoBook, Quantity = 1},
+                            new OrderLine {ProductType = Models.Enums.ProductType.Calendar, Quantity = 2},
+                            new OrderLine {ProductType = Models.Enums.ProductType.Cards, Quantity = 1},
+                            new OrderLine {ProductType = Models.Enums.ProductType.Mug, Quantity = 1}, // Mug Qunatity 1
+                        }
+                    }
+                },
+                // Mug Qunatity 2 and everything else same as previous order should have no change on RequiredMinWidth
+                new object[] {
+                    137.7,
+                    new Order{
+                        OrderLine =  new List<OrderLine>
+                        {
+                            new OrderLine {ProductType = Models.Enums.ProductType.PhotoBook, Quantity = 1},
+                            new OrderLine {ProductType = Models.Enums.ProductType.Calendar, Quantity = 2},
+                            new OrderLine {ProductType = Models.Enums.ProductType.Cards, Quantity = 1},
+                            new OrderLine {ProductType = Models.Enums.ProductType.Mug, Quantity = 2},
+                        }
+                    }
+                },
+                // Mug Qunatity 3 and everything else same as previous order should have no change on RequiredMinWidth
+                new object[] {
+                    137.7,
+                    new Order{
+                        OrderLine =  new List<OrderLine>
+                        {
+                            new OrderLine {ProductType = Models.Enums.ProductType.PhotoBook, Quantity = 1},
+                            new OrderLine {ProductType = Models.Enums.ProductType.Calendar, Quantity = 2},
+                            new OrderLine {ProductType = Models.Enums.ProductType.Cards, Quantity = 1},
+                            new OrderLine {ProductType = Models.Enums.ProductType.Mug, Quantity = 3},
+                        }
+                    }
+                },
+                // Mug Qunatity 4 and everything else same as previous order should have no change on RequiredMinWidth
+                new object[] {
+                    137.7,
+                    new Order{
+                        OrderLine =  new List<OrderLine>
+                        {
+                            new OrderLine {ProductType = Models.Enums.ProductType.PhotoBook, Quantity = 1},
+                            new OrderLine {ProductType = Models.Enums.ProductType.Calendar, Quantity = 2},
+                            new OrderLine {ProductType = Models.Enums.ProductType.Cards, Quantity = 1},
+                            new OrderLine {ProductType = Models.Enums.ProductType.Mug, Quantity = 4},
+                        }
+                    }
+                },
+                // Mug Qunatity 5 and everything else same as previous order should add width of one more mug to RequiredMinWidth
+                new object[] {
+                    231.7,
+                    new Order{
+                        OrderLine =  new List<OrderLine>
+                        {
+                            new OrderLine {ProductType = Models.Enums.ProductType.PhotoBook, Quantity = 1},
+                            new OrderLine {ProductType = Models.Enums.ProductType.Calendar, Quantity = 2},
+                            new OrderLine {ProductType = Models.Enums.ProductType.Cards, Quantity = 1},
+                            new OrderLine {ProductType = Models.Enums.ProductType.Mug, Quantity = 5},
+                        }
+                    }
+                }
+            };
         public OrderLogicTests()
         {
             orderRepositoryMock = new Mock<IOrderRepository>();
@@ -31,7 +104,7 @@ namespace Albellicart.BusinessLogic.Tests
         }
 
         [Fact()]
-        public void ShouldCallOrderRepository_GetOrdersTest()
+        public void Should_Call_Order_Repository_GetOrdersTest()
         {
             target.GetOrders();
 
@@ -39,7 +112,7 @@ namespace Albellicart.BusinessLogic.Tests
         }
 
         [Fact()]
-        public void ShouldCallOrderRepository_GetOrderTest()
+        public void Should_Call_Order_Repository_GetOrderTest()
         {
             target.GetOrder(It.IsAny<int>());
 
@@ -47,7 +120,7 @@ namespace Albellicart.BusinessLogic.Tests
         }
 
         [Fact()]
-        public void ShouldThrowExceptionWhenOrderIsNull_AddOrderTest()
+        public void Should_Throw_Exception_When_Order_IsNull_AddOrderTest()
         {
             // Arrange
             Order order = null;
@@ -57,7 +130,7 @@ namespace Albellicart.BusinessLogic.Tests
         }
 
         [Fact()]
-        public void ShouldThrowExceptionWhenOrderLinesIsNull_AddOrderTest()
+        public void Should_Throw_Exception_When_Order_Lines_IsNull_AddOrderTest()
         {
             // Arrange
             Order order = new Order { OrderLine = null };
@@ -67,7 +140,7 @@ namespace Albellicart.BusinessLogic.Tests
         }
 
         [Fact()]
-        public void ShouldThrowExceptionWhenOrderLinesIsExpty_AddOrderTest()
+        public void Should_Throw_Exception_When_Order_Lines_IsExpty_AddOrderTest()
         {
             // Arrange
             Order order = new Order { OrderLine = new List<OrderLine>() };
@@ -77,91 +150,24 @@ namespace Albellicart.BusinessLogic.Tests
         }
 
         [Fact()]
-        public void ShouldReturnOrderBack_AddOrderTest()
+        public void Should_Throw_Exception_When_Order_Has_All_Zero_Qty_Products_AddOrderTest()
         {
             // Arrange
-            Order order = new Order { OrderLine = new List<OrderLine> { new OrderLine { ProductType = Models.Enums.ProductType.Calendar, Quantity = 2 } } };
-
-            // Act
-            var output = target.AddOrder(order);
-
-            // Assert
-            orderRepositoryMock.Verify(m => m.AddOrder(order), Times.Once);
-            Assert.NotNull(output);
-        }
-
-        /// <summary>
-        /// This is test data for orders with different combination of Product & their quantities
-        /// You can add
-        /// </summary>
-        public static IEnumerable<object[]> TestOrderData =>
-            new List<object[]>
-            {
-                new object[] {
-                    137.7,
-                    new Order{
-                        OrderLine =  new List<OrderLine>
-                        {
-                            new OrderLine {ProductType = Models.Enums.ProductType.PhotoBook, Quantity = 1},
-                            new OrderLine {ProductType = Models.Enums.ProductType.Calendar, Quantity = 2},
-                            new OrderLine {ProductType = Models.Enums.ProductType.Cards, Quantity = 1},
-                            new OrderLine {ProductType = Models.Enums.ProductType.Mug, Quantity = 1},
-                        }
-                    }
-                },
-                new object[] {
-                    137.7,
-                    new Order{
-                        OrderLine =  new List<OrderLine>
-                        {
-                            new OrderLine {ProductType = Models.Enums.ProductType.PhotoBook, Quantity = 1},
-                            new OrderLine {ProductType = Models.Enums.ProductType.Calendar, Quantity = 2},
-                            new OrderLine {ProductType = Models.Enums.ProductType.Cards, Quantity = 1},
-                            new OrderLine {ProductType = Models.Enums.ProductType.Mug, Quantity = 2},
-                        }
-                    }
-                },
-                new object[] {
-                    137.7,
-                    new Order{
-                        OrderLine =  new List<OrderLine>
-                        {
-                            new OrderLine {ProductType = Models.Enums.ProductType.PhotoBook, Quantity = 1},
-                            new OrderLine {ProductType = Models.Enums.ProductType.Calendar, Quantity = 2},
-                            new OrderLine {ProductType = Models.Enums.ProductType.Cards, Quantity = 1},
-                            new OrderLine {ProductType = Models.Enums.ProductType.Mug, Quantity = 3},
-                        }
-                    }
-                },
-                new object[] {
-                    137.7,
-                    new Order{
-                        OrderLine =  new List<OrderLine>
-                        {
-                            new OrderLine {ProductType = Models.Enums.ProductType.PhotoBook, Quantity = 1},
-                            new OrderLine {ProductType = Models.Enums.ProductType.Calendar, Quantity = 2},
-                            new OrderLine {ProductType = Models.Enums.ProductType.Cards, Quantity = 1},
-                            new OrderLine {ProductType = Models.Enums.ProductType.Mug, Quantity = 4},
-                        }
-                    }
-                },
-                new object[] {
-                    231.7,
-                    new Order{
-                        OrderLine =  new List<OrderLine>
-                        {
-                            new OrderLine {ProductType = Models.Enums.ProductType.PhotoBook, Quantity = 1},
-                            new OrderLine {ProductType = Models.Enums.ProductType.Calendar, Quantity = 2},
-                            new OrderLine {ProductType = Models.Enums.ProductType.Cards, Quantity = 1},
-                            new OrderLine {ProductType = Models.Enums.ProductType.Mug, Quantity = 5},
-                        }
-                    }
-                },
+            Order order = new Order { 
+                OrderLine = new List<OrderLine> 
+                {
+                    new OrderLine { ProductType = Models.Enums.ProductType.Calendar , Quantity = 0 },
+                    new OrderLine { ProductType = Models.Enums.ProductType.Canvas , Quantity = 0 },
+                } 
             };
+
+            // Act & Assert
+            Assert.Throws<Exception>(() => target.AddOrder(order));
+        }
 
         [Theory]
         [MemberData(nameof(TestOrderData))]
-        public void ShouldReturnRequiredMinWidth_AddOrderTest(double expectedRequiredMinWidth, Order order)
+        public void Should_Return_Required_Min_Width_AddOrderTest(double expectedRequiredMinWidth, Order order)
         {
             // Act
             var output = target.AddOrder(order);

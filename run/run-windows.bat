@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd Albellicart
+cd ..\src\Albellicart
 dotnet restore
 
 START dotnet run

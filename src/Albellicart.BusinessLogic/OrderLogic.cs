@@ -30,6 +30,11 @@ namespace Albellicart.BusinessLogic
                 throw new Exception("Order cannot be empty. Please add product and quantity.");
             }
 
+            if (GetCountAfterRemovingZeroQtyProducts(order) == 0)
+            {
+                throw new Exception("Order cannot have products without valid quantity. Please add product and valid quantity.");
+            }
+
             SetRequiredBinWidth(order);
 
             return _orderRepository.AddOrder(order);
@@ -44,6 +49,19 @@ namespace Albellicart.BusinessLogic
                       (x, y) => Math.Ceiling((double)x.Quantity / y.WidthFactor) * y.WidthInmm)
                 .Sum()
                 ;
+        }
+
+        private int GetCountAfterRemovingZeroQtyProducts(Order order)
+        {
+            var orderlines = order
+                .OrderLine
+                .ToList();
+
+            orderlines.RemoveAll(x => x.Quantity == 0);
+
+            order.OrderLine = orderlines;
+
+            return order.OrderLine.Count();
         }
     }
 }

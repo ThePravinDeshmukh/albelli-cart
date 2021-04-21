@@ -10,8 +10,6 @@ namespace Albellicart.Schema
         {
             Query = provider.GetRequiredService<AlbelliQuery>();
             Mutation = provider.GetRequiredService<AlbelliMutation>();
-
-
         }
     }
 }

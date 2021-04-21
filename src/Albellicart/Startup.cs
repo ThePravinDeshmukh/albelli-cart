@@ -46,8 +46,7 @@ namespace Albellicart
                 options.EnableMetrics = true;
             })
             .AddErrorInfoProvider(opt => opt.ExposeExceptionStackTrace = true)
-            .AddSystemTextJson()
-            .AddUserContextBuilder(httpContext => new GraphQLUserContext { User = httpContext.User });
+            .AddSystemTextJson();
 
 
             services.Configure<KestrelServerOptions>(options =>

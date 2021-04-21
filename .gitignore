@@ -26,3 +26,5 @@
 /src/Albellicart.Logging/obj
 /src/Albellicart.Logging/bin/Debug/netstandard2.1
 /src/published
+/src/Albellicart.Schema.Behaviour/bin/Debug/netcoreapp3.1
+/src/Albellicart.Schema.Behaviour/obj

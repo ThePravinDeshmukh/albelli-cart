@@ -60,7 +60,7 @@ query{order(id: 1)
 } 
 ```
 
-![](img/getOrder.jpg)
+![](img/get-order.jpg)
 
 or pass query as argument to /graphql endpoint
 ``` http://localhost:5000/graphql?query={order(id:1){id,orderLine{productType,quantity}requiredBinWidth}} ```
@@ -68,13 +68,8 @@ or pass query as argument to /graphql endpoint
 ### Mutation - Create an Order
 
 ```
-mutation{
-  createOrder(orderlines: [
-    { productType: MUG, quantity: 54 },
-    { productType: PHOTO_BOOK, quantity: 76 },
-    { productType: CANVAS, quantity: 7 },
-    { productType: Calendar, quantity: 9 }
-  ])
+mutation($order: [OrderLine]!){
+  createOrder(orderlines: $order)
   {
     id,
     requiredBinWidth,
@@ -90,15 +85,15 @@ and add query variables
 
 ```
 {
-  "orderlines": [
-    {"productType": "PHOTO_BOOK","quantity": 13},
+  "order": [
+    {"productType": "PHOTO_BOOK","quantity": 1},
     {"productType": "CALENDAR","quantity": 2},
-    {"productType": "MUG","quantity": 7}
+    {"productType": "MUG","quantity": 4}
   ]
 }
 ```
 
-![](img/createOrder.jpg)
+![](img/create-order.jpg)
 
 The JSON request for this mutation would look like:
 ```
