@@ -1,9 +1,7 @@
-using System;
 using GraphQL;
 using GraphQL.Types;
 using Albellicart.Schema.Types;
 using Albellicart.Schema.Core;
-using Albellicart.Models.Repository;
 using Albellicart.BusinessLogic;
 
 namespace Albellicart.Schema
@@ -12,18 +10,18 @@ namespace Albellicart.Schema
     {
         public AlbelliQuery(IOrderLogic orderLogic)
         {
-            Name = QueryName.AlbelliQuery;
+            Name = Constants.AlbelliQuery.Name;
 
             // Query for getting all orders
-            Field<ListGraphType<OrderType>>("orders", resolve: context => orderLogic.GetOrders());
+            Field<ListGraphType<OrderType>>(Constants.AlbelliQuery.Orders, resolve: context => orderLogic.GetOrders());
 
             // Query for getting an order
             Field<OrderType>(
-                "order",
+                Constants.AlbelliQuery.Order,
                 arguments: new QueryArguments(
-                    new QueryArgument<NonNullGraphType<IntGraphType>> { Name = "id", Description = "Id of an order" }
+                    new QueryArgument<NonNullGraphType<IntGraphType>> { Name = Constants.AlbelliQuery.Id, Description = Constants.AlbelliQuery.IdDescription }
                 ),
-                resolve: context => orderLogic.GetOrder(context.GetArgument<int>("id"))
+                resolve: context => orderLogic.GetOrder(context.GetArgument<int>(Constants.AlbelliQuery.Id))
             );
 
         }

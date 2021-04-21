@@ -1,4 +1,5 @@
 ﻿using Albellicart.Models;
+using Albellicart.Schema.Core;
 using GraphQL.Types;
 using System;
 using System.Collections.Generic;
@@ -12,10 +13,10 @@ namespace Albellicart.Schema.Types
     {
         public OrderType()
         {
-            Field(f => f.Id).Description("Id of an Order");
+            Field(f => f.Id).Description(Constants.OrderType.IdDescription);
             Field(f => f.OrderLine, type: typeof(ListGraphType<OrderLineType>))
-                .Description("List of Products and their quantitites in an Order");
-            Field(f => f.RequiredBinWidth).Description("Required Bin Width in millimeters (mm)");
+                .Description(Constants.OrderType.OrderLineDescription);
+            Field(f => f.RequiredBinWidth).Description(Constants.OrderType.OrderLineRequiredBinWidth);
         }
     }
 }

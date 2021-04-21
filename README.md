@@ -60,7 +60,7 @@ query{order(id: 1)
 } 
 ```
 
-![](img/get-order.jpg)
+![](img/get-order.JPG)
 
 or pass query as argument to /graphql endpoint
 ``` http://localhost:5000/graphql?query={order(id:1){id,orderLine{productType,quantity}requiredBinWidth}} ```
@@ -93,7 +93,7 @@ and add query variables
 }
 ```
 
-![](img/create-order.jpg)
+![](img/create-order.JPG)
 
 The JSON request for this mutation would look like:
 ```
@@ -110,16 +110,35 @@ The JSON request for this mutation would look like:
 ```
 mutation ($orderlines:[OrderLine]!){ createOrder(orderlines: $orderlines) { id, requiredBinWidth, orderLine {productType, quantity } } }
 
+# How to Generate Coverage Report
+
+You can generate coverage report for solution and view in html
+
+Run
+```coverage\generate-coverage.bat```
+
+This will 
+    Run Tests in solution
+    Generate coverage report in html
+    Open report in browser
+
 # How to Run
 
-## Docker
+You can run Web API on target as Windows or in Docker container.
 
-### Build Image
+##Docker
 
-```docker build -t albellicart .```
+    Required - Docker Engine Installed https://docs.docker.com/engine/install/
 
-### Run Image
+Run
+```run\run-docker.bat```
 
-```docker run -it --rm -p 80:5000 --name albellicartcontainer albellicart```
+## Windows 
+Prerequisite
 
+	Required - Dotnet Core 3.1 SDK 
+	Optional - Visual Studio 2019 
+Run
+```run\run-windows.bat```
 
+ 

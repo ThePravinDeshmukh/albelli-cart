@@ -39,7 +39,6 @@ namespace Albellicart.Schema.Behaviour
         {
             albelliSchema.Query.Fields.Count().Should().Be(2);
             albelliSchema.Mutation.Fields.Count().Should().Be(1);
-
         }
     }
 }

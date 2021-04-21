@@ -5,6 +5,7 @@ using Albellicart.Models.Repository;
 using Albellicart.Models;
 using Albellicart.BusinessLogic;
 using System.Collections.Generic;
+using Albellicart.Schema.Core;
 
 namespace Albellicart.Schema
 {
@@ -24,18 +25,16 @@ namespace Albellicart.Schema
     {
         public AlbelliMutation(IOrderLogic orderLogic)
         {
-            Name = "Mutation";
-
+            Name = Constants.AlbelliMutation.Name;
 
             Field<OrderType>(
-                "createOrder",
+                Constants.AlbelliMutation.OrderTypeName,
                 arguments: new QueryArguments(
-                    new QueryArgument<NonNullGraphType<ListGraphType<OrderLineInputType>>> { Name = "orderlines" }
+                    new QueryArgument<NonNullGraphType<ListGraphType<OrderLineInputType>>> { Name = Constants.AlbelliMutation.OrderTypeOrderlines }
                 ),
                 resolve: context =>
                 {
-                    var orderLines = context.GetArgument<IEnumerable<OrderLine>>("orderlines");
-
+                    var orderLines = context.GetArgument<IEnumerable<OrderLine>>(Constants.AlbelliMutation.OrderTypeOrderlines);
 
                     return orderLogic.AddOrder(new Order { OrderLine = orderLines });
                 });

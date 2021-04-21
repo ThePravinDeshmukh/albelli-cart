@@ -1,4 +1,5 @@
 using Albellicart.Models.Enums;
+using Albellicart.Schema.Core;
 using GraphQL.Types;
 
 namespace Albellicart.Schema.Types
@@ -7,7 +8,7 @@ namespace Albellicart.Schema.Types
     {
         public ProductTypeEnum()
         {
-            Name = "ProductType";
+            Name = Constants.ProductTypeEnum.Name;
             AddValue(nameof(ProductType.PhotoBook), null, ProductType.PhotoBook);
             AddValue(nameof(ProductType.Calendar), null, ProductType.Calendar);
             AddValue(nameof(ProductType.Canvas), null, ProductType.Canvas);

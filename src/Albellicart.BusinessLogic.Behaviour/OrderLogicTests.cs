@@ -12,11 +12,9 @@ namespace Albellicart.BusinessLogic.Tests
     public class OrderLogicTests
     {
         private readonly OrderLogic target;
-        private readonly Mock<IOrderLogic> targetMock;
+
         private readonly Mock<IOrderRepository> orderRepositoryMock;
         private readonly IProductRepository productRepository;
-        private readonly Mock<IOrder> orderMock;
-        private readonly IOrder order;
 
         /// <summary>
         /// This is test data for orders with different combination of Product & their quantities
@@ -94,13 +92,10 @@ namespace Albellicart.BusinessLogic.Tests
         {
             orderRepositoryMock = new Mock<IOrderRepository>();
             productRepository = new ProductRepository();
-            orderMock = new Mock<IOrder>();
-            order = new Order();
 
             target = new OrderLogic(
                 orderRepositoryMock.Object,
                 productRepository);
-            targetMock = new Mock<IOrderLogic>();
         }
 
         [Fact()]
@@ -170,7 +165,7 @@ namespace Albellicart.BusinessLogic.Tests
         public void Should_Return_Required_Min_Width_AddOrderTest(double expectedRequiredMinWidth, Order order)
         {
             // Act
-            var output = target.AddOrder(order);
+            target.AddOrder(order);
 
             // Assert
             Assert.Equal(expectedRequiredMinWidth, order.RequiredBinWidth);

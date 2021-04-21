@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Albellicart.Schema.Core;
 
 namespace Albellicart.Schema.Types
 {
@@ -14,10 +15,10 @@ namespace Albellicart.Schema.Types
         public OrderLineType()
         {
             Field(f => f.ProductType, type: typeof(ProductTypeEnum), nullable: false)
-                .Description("Product Type in Order");
+                .Description(Constants.OrderLineType.ProductTypeDescription);
 
             Field(f => f.Quantity, nullable: false)
-                .Description("Product Quantity in Order");
+                .Description(Constants.OrderLineType.QuantityDescription);
         }
     }
 }
