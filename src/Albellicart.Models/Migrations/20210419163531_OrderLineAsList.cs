@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Albellicart.Models.Migrations
 {
+    [ExcludeFromCodeCoverage]
     public partial class OrderLineAsList : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

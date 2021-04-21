@@ -10,6 +10,7 @@ using FluentAssertions;
 using Albellicart.Schema.Types;
 using Albellicart.Models;
 using GraphQL.Types;
+using GraphQL;
 
 namespace Albellicart.Schema.Behaviour
 {
@@ -17,10 +18,12 @@ namespace Albellicart.Schema.Behaviour
     {
         private readonly AlbelliMutation albelliMutation;
         private readonly Mock<IOrderLogic> mockOrderLogic;
+        private readonly Mock<IResolveFieldContext> mockResolveFieldContext;
 
         public AlbelliMutationTests()
         {
             mockOrderLogic = new Mock<IOrderLogic>();
+            mockResolveFieldContext = new Mock<IResolveFieldContext>();
 
             albelliMutation = new AlbelliMutation(mockOrderLogic.Object);
         }
@@ -35,6 +38,8 @@ namespace Albellicart.Schema.Behaviour
             targetType.Arguments.First().Type.Should().Be(typeof(NonNullGraphType<ListGraphType<OrderLineInputType>>));
             targetType.Arguments.Count.Should().Be(1);
             targetType.Arguments[0].Name.Should().Be("orderlines");
+
+            targetType.Resolver.Resolve(mockResolveFieldContext.Object);
         }
     }
 }
