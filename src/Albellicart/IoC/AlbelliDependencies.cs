@@ -1,4 +1,5 @@
 ﻿using Albellicart.BusinessLogic;
+using Albellicart.Models;
 using Albellicart.Models.Repository;
 using Albellicart.Schema;
 using GraphQL.Types;
@@ -17,6 +18,7 @@ namespace Albellicart.IoC
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IOrderLogic, OrderLogic>();
+            services.AddScoped<IOrder, Order>();
         }
     }
 }

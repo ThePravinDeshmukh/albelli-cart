@@ -1,5 +1,5 @@
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
-WORKDIR /src
+WORKDIR /src1
 COPY . .
 RUN dotnet restore
 RUN dotnet publish -c release -o /app

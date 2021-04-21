@@ -17,26 +17,26 @@ namespace Albellicart.Models.Repository
         public IEnumerable<Order> GetOrders()
         {
             // Note: This sample requires the database to be created before running.
-            return context.Order.Include(b => b.OrderLine).ToList();
-
+            return context
+                .Order
+                .Include(b => b.OrderLine)
+                .ToList();
         }
         public Order GetOrder(int id)
         {
-
             // Note: This sample requires the database to be created before running.
-            return context.Order.Include(b => b.OrderLine).FirstOrDefault(x => x.Id == id);
-
+            return context
+                .Order
+                .Include(b => b.OrderLine)
+                .FirstOrDefault(x => x.Id == id);
         }
         public Order AddOrder(Order order)
         {
-
             // Note: This sample requires the database to be created before running.
             context.Order.Add(order);
             context.SaveChanges();
 
             return order;
-
-
         }
     }
 }

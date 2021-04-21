@@ -29,11 +29,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albellicart.Models.Behaviou
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albellicart.BusinessLogic", "Albellicart.BusinessLogic\Albellicart.BusinessLogic.csproj", "{A34A669C-E0EB-4353-AFA0-256018744B0A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albellicart.BusinessLogic.Behaviour", "Albellicart.BusinessLogic.Behaviour\Albellicart.BusinessLogic.Behaviour.csproj", "{406701F7-F46C-482B-9F7C-6D1105BF4C82}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cross-Cutting", "Cross-Cutting", "{9B129FB1-D4D7-4FE7-90C1-BAF9EB0524F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albellicart.Logging", "Albellicart.Logging\Albellicart.Logging.csproj", "{CF4B93AA-176B-40AF-AAB6-D50A29207C18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albellicart.Logging", "Albellicart.Logging\Albellicart.Logging.csproj", "{CF4B93AA-176B-40AF-AAB6-D50A29207C18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albellicart.BusinessLogic.Behaviour", "Albellicart.BusinessLogic.Behaviour\Albellicart.BusinessLogic.Behaviour.csproj", "{497A6C14-F461-4276-BC75-CF2CAE444024}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,14 +65,14 @@ Global
 		{A34A669C-E0EB-4353-AFA0-256018744B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A34A669C-E0EB-4353-AFA0-256018744B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A34A669C-E0EB-4353-AFA0-256018744B0A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{406701F7-F46C-482B-9F7C-6D1105BF4C82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{406701F7-F46C-482B-9F7C-6D1105BF4C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{406701F7-F46C-482B-9F7C-6D1105BF4C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{406701F7-F46C-482B-9F7C-6D1105BF4C82}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CF4B93AA-176B-40AF-AAB6-D50A29207C18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CF4B93AA-176B-40AF-AAB6-D50A29207C18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF4B93AA-176B-40AF-AAB6-D50A29207C18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF4B93AA-176B-40AF-AAB6-D50A29207C18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{497A6C14-F461-4276-BC75-CF2CAE444024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{497A6C14-F461-4276-BC75-CF2CAE444024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{497A6C14-F461-4276-BC75-CF2CAE444024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{497A6C14-F461-4276-BC75-CF2CAE444024}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,8 +84,8 @@ Global
 		{4DEE7F15-3C4B-4B19-967C-F65108802D2C} = {5FD47CA7-E402-4618-88B4-8114AB240AE7}
 		{B52B5BD2-CC21-4FEF-8B2B-C9D62983C572} = {F6611BC7-2637-45C6-954B-32BCE3D8A71A}
 		{A34A669C-E0EB-4353-AFA0-256018744B0A} = {E6953BE2-145D-4B31-A9BF-2AF8FCE94DE4}
-		{406701F7-F46C-482B-9F7C-6D1105BF4C82} = {E6953BE2-145D-4B31-A9BF-2AF8FCE94DE4}
 		{CF4B93AA-176B-40AF-AAB6-D50A29207C18} = {9B129FB1-D4D7-4FE7-90C1-BAF9EB0524F4}
+		{497A6C14-F461-4276-BC75-CF2CAE444024} = {E6953BE2-145D-4B31-A9BF-2AF8FCE94DE4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FE6E4A8D-E133-45CF-8FED-74954A616F51}

@@ -35,7 +35,9 @@ namespace Albellicart.Schema
                 resolve: context =>
                 {
                     var orderLines = context.GetArgument<IEnumerable<OrderLine>>("orderlines");
-                    return orderLogic.AddOrder(orderLines);
+
+
+                    return orderLogic.AddOrder(new Order { OrderLine = orderLines });
                 });
         }
     }

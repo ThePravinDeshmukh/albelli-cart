@@ -23,12 +23,12 @@ namespace Albellicart.BusinessLogic
         {
             return _orderRepository.GetOrder(id);
         }
-        public Order AddOrder(IEnumerable<OrderLine> orderLines)
+        public Order AddOrder(Order order)
         {
-            Order order = new Order
+            if (order == null || order.OrderLine == null || order.OrderLine.Count() == 0)
             {
-                OrderLine = orderLines.ToList()
-            };
+                throw new Exception("Order cannot be empty. Please add product and quantity.");
+            }
 
             SetRequiredBinWidth(order);
 
@@ -44,11 +44,6 @@ namespace Albellicart.BusinessLogic
                       (x, y) => Math.Ceiling((double)x.Quantity / y.WidthFactor) * y.WidthInmm)
                 .Sum()
                 ;
-        }
-
-        private void SetId(Order order)
-        {
-            order.Id = _orderRepository.GetOrders().Count() + 1;
         }
     }
 }
