@@ -230,8 +230,7 @@ var assemblies = [
       { "name": "Albellicart.GraphQLUserContext", "rp": "Albellicart_GraphQLUserContext.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 10, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Albellicart.IoC.AlbelliDependencies", "rp": "Albellicart_AlbelliDependencies.html", "cl": 6, "ucl": 0, "cal": 6, "tl": 24, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Albellicart.IoC.GraphQlDependencies", "rp": "Albellicart_GraphQlDependencies.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 27, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Albellicart.Program", "rp": "Albellicart_Program.html", "cl": 0, "ucl": 17, "cal": 17, "tl": 38, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Albellicart.Startup", "rp": "Albellicart_Startup.html", "cl": 41, "ucl": 9, "cal": 50, "tl": 103, "ct": "LineCoverage", "mc": "-", "cb": 1, "tb": 2, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.Startup", "rp": "Albellicart_Startup.html", "cl": 42, "ucl": 9, "cal": 51, "tl": 105, "ct": "LineCoverage", "mc": "-", "cb": 1, "tb": 2, "lch": [], "bch": [], "hc": [] },
     ]},
   {
     "name": "Albellicart.BusinessLogic",

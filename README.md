@@ -1,6 +1,10 @@
 
 # Albellicart .NET Core GraphQL API
 
+<p align="left">
+  <a href="https://github.com/ThePravinDeshmukh/albelli-cart"><img alt="GitHub Actions status" src="https://github.com/actions/setup-dotnet/workflows/Main%20workflow/badge.svg"></a>
+</p>
+
 ## Quick Start
 ```
 > run-api\via-dotnet-cli.bat
@@ -23,6 +27,7 @@ Confluence - https://techfactor.atlassian.net/l/c/HE5GnM1C
 |  | Code Coverage | Cobertura | Done | https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-code-coverage?tabs=windows |
 |  | Service Discovery | Eureka | NOT STARTED | https://steeltoe.io/service-discovery/get-started/eureka |
 |  | Code Analysis | EnableNETAnalyzers, EnforceCodeStyleInBuild | Done | https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview#code-quality-analysis |
+|  | CI | GitHub Actions | Done | https://github.com/ThePravinDeshmukh/albelli-cart/actions |
 | Database | In-Memory SQL or NoSql | As confirmed, using In-memory SQL for demonstration. | Done | https://docs.microsoft.com/en-us/ef/core/providers/in-memory/?tabs=dotnet-core-cli |
 | Deployment and Runtime | Container | Docker | Done | Run ```run-api\via-docker.bat``` |
 |  | Windows | Dotnet core 3.1 runtime | Done | Run ```run-api\via-dotnet-cli.bat``` |
