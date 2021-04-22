@@ -129,6 +129,11 @@ The JSON request for this mutation would look like:
 }
 ```
 
+### GraphQL Playground
+
+![](img/graphql-playground.gif)
+
+
 # How to Generate Coverage Report
 
 You can generate coverage report for solution and view in html
