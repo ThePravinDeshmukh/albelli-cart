@@ -133,6 +133,8 @@ The JSON request for this mutation would look like:
 
 You can generate coverage report for solution and view in html
 
+![](img/coverage-report.JPG)
+
 Run
 ```coverage\generate-report.bat```
 
