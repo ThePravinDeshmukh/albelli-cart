@@ -2,7 +2,7 @@
 # Albellicart .NET Core GraphQL API
 
 <p align="left">
-  <a href="https://github.com/ThePravinDeshmukh/albelli-cart"><img alt="GitHub Actions status" src="https://github.com/actions/setup-dotnet/workflows/Main%20workflow/badge.svg"></a>
+  <a href="https://github.com/ThePravinDeshmukh/albelli-cart"><img alt="GitHub Actions status" src="https://github.com/ThePravinDeshmukh/albelli-cart/workflows/.NET/badge.svg"></a>
 </p>
 
 ## Quick Start
