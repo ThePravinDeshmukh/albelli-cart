@@ -3,7 +3,7 @@
 
 ## Quick Start
 ```
-> run\run-windows.bat
+> run-api\via-dotnet-cli.bat
 > browse to http://localhost:5000/ui/playground
 ```
 
@@ -14,14 +14,12 @@ Confluence - https://techfactor.atlassian.net/l/c/HE5GnM1C
 
 | Component        	| Attribute					| Value  	| Status  | Reference |
 | ------------- 	|-------------		| -------------	| ------------- |-------------|
-| Web API | Repository | https://github.com/ThePravinDeshmukh/albelli-cart | Done |  |
+| Web API | Repository | GitHub | Done | https://github.com/ThePravinDeshmukh/albelli-cart |
 |  | Framework | dotnet 3.1 | Done | https://dotnet.microsoft.com/download/dotnet/3.1 |
 |  | ORM | EF Core | Done | https://docs.microsoft.com/en-us/ef/core/ |
 |  | API Querying | GraphQL | Done | https://github.com/graphql-dotnet/graphql-dotnet |
 |  | Logging | Serilog | Done | https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-3.1 |
 |  | Tests | XUnit with Moq | Done | EF Core Testing https://docs.microsoft.com/en-us/ef/core/testing/ |
-|  |  |  | EF Core tests |  |
-|  |  |  | Graphql endpoint tests |  |
 |  | Code Coverage | Cobertura | Done | https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-code-coverage?tabs=windows |
 |  | Service Discovery | Eureka | NOT STARTED | https://steeltoe.io/service-discovery/get-started/eureka |
 |  | Code Analysis | EnableNETAnalyzers, EnforceCodeStyleInBuild | Done | https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview#code-quality-analysis |

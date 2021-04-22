@@ -9,9 +9,9 @@ namespace Albellicart.Models.Repository
     public class OrderRepository : IOrderRepository
     {
         private readonly AlbellicartContext context;
-        public OrderRepository(AlbellicartContext albellicartContext)
+        public OrderRepository(AlbellicartContext AlbellicartContext)
         {
-            this.context = albellicartContext;
+            this.context = AlbellicartContext;
         }
 
         public IEnumerable<Order> GetOrders()

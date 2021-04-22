@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\albellicart\Albellicart.csproj" />
+    <ProjectReference Include="..\Albellicart\Albellicart.csproj" />
   </ItemGroup>
 
 </Project>

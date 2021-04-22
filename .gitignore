@@ -32,3 +32,7 @@
 /src/Albellicart.BusinessLogic.Behaviour/TestResults/0f59d0cb-50fe-4a60-aacd-33ab3e08dc52
 /src/Albellicart.Models.Behaviour/TestResults/10185834-cbae-46aa-827f-052c64729419
 /src/*/TestResults/
+/src/Albellicart/bin/release/netcoreapp3.1
+/src/Albellicart.BusinessLogic/bin/release/netstandard2.1
+/src/Albellicart.Models/bin/release/netstandard2.1
+/src/Albellicart.Schema/bin/release/netstandard2.1
