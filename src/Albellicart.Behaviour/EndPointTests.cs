@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Albellicart.Behaviour
 {
-    public class BasicTests : SystemTestBase<Startup>
+    public class EndPointTests : SystemTestBase<Startup>
     {
         [Fact]
         public async Task Get_Order_By_Id_QueryTest()

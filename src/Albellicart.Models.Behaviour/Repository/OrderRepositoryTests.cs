@@ -86,6 +86,8 @@ namespace Albellicart.Models.Repository.Behaviour
 
                 var existingOrder = controller.GetOrder(1);
 
+                existingOrder.Id = 0;
+
                 var newOrder = controller.AddOrder(existingOrder);
 
                 Assert.NotNull(newOrder);

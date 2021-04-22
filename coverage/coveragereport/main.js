@@ -245,7 +245,7 @@ var assemblies = [
       { "name": "Albellicart.Models.Order", "rp": "Albellicart.Models_Order.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 16, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Albellicart.Models.OrderLine", "rp": "Albellicart.Models_OrderLine.html", "cl": 2, "ucl": 2, "cal": 4, "tl": 16, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Albellicart.Models.Product", "rp": "Albellicart.Models_Product.html", "cl": 3, "ucl": 1, "cal": 4, "tl": 17, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Albellicart.Models.Repository.OrderRepository", "rp": "Albellicart.Models_OrderRepository.html", "cl": 16, "ucl": 5, "cal": 21, "tl": 42, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.Models.Repository.OrderRepository", "rp": "Albellicart.Models_OrderRepository.html", "cl": 21, "ucl": 0, "cal": 21, "tl": 42, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Albellicart.Models.Repository.ProductRepository", "rp": "Albellicart.Models_ProductRepository.html", "cl": 14, "ucl": 3, "cal": 17, "tl": 33, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
     ]},
   {
