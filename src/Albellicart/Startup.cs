@@ -16,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -96,8 +97,9 @@ namespace Albellicart
                 GraphQLEndPoint = "/graphql",
             });
 
-
             app.UseGraphQLAltair();
+
+            Log.Information("Started web host");
         }
     }
 }

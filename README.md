@@ -18,16 +18,16 @@ Confluence - https://techfactor.atlassian.net/l/c/HE5GnM1C
 |  | Framework | dotnet 3.1 | Done | https://dotnet.microsoft.com/download/dotnet/3.1 |
 |  | ORM | EF Core | Done | https://docs.microsoft.com/en-us/ef/core/ |
 |  | API Querying | GraphQL | Done | https://github.com/graphql-dotnet/graphql-dotnet |
-|  | Logging | ?? | NOT STARTED | https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-3.1 |
-|  | Tests | XUnit with Moq | In Progress | EF Core Testing https://docs.microsoft.com/en-us/ef/core/testing/ |
+|  | Logging | Serilog | Done | https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-3.1 |
+|  | Tests | XUnit with Moq | Done | EF Core Testing https://docs.microsoft.com/en-us/ef/core/testing/ |
 |  |  |  | EF Core tests |  |
 |  |  |  | Graphql endpoint tests |  |
 |  | Code Coverage | Cobertura | Done | https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-code-coverage?tabs=windows |
 |  | Service Discovery | Eureka | NOT STARTED | https://steeltoe.io/service-discovery/get-started/eureka |
-|  | Code Analysis | EnableNETAnalyzers | Done | https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview#code-quality-analysis |
+|  | Code Analysis | EnableNETAnalyzers, EnforceCodeStyleInBuild | Done | https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview#code-quality-analysis |
 | Database | In-Memory SQL or NoSql | As confirmed, using In-memory SQL for demonstration. | Done | https://docs.microsoft.com/en-us/ef/core/providers/in-memory/?tabs=dotnet-core-cli |
-| Deployment and Runtime | Container | Docker | Done | Run ```run\run-docker.bat``` |
-|  | Windows | Dotnet core 3.1 runtime | Done | Run ```run\run-windows.bat``` |
+| Deployment and Runtime | Container | Docker | Done | Run ```run-api\via-docker.bat``` |
+|  | Windows | Dotnet core 3.1 runtime | Done | Run ```run-api\via-dotnet-cli.bat``` |
 
 
 ## GraphQL
@@ -138,6 +138,8 @@ This will
     Run Tests in solution
     Generate coverage report in html
     Open report in browser
+	
+![](img/generate-coverage-report.gif)
 
 # How to Run
 
@@ -150,6 +152,8 @@ You can run Web API on target as Windows or in Docker container.
 Run
 ```run-api\via-docker.bat```
 
+![](img/run-via-docker.gif)
+
 ## Windows 
 Prerequisite
 
@@ -158,4 +162,5 @@ Prerequisite
 Run
 ```run-api\via-dotnet-cli.bat```
 
+![](img/run-via-dotnet-cli.gif)
  
