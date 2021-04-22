@@ -1,7 +1,10 @@
 using Albellicart.IoC;
 using Albellicart.Models;
 using Albellicart.Schema;
+using GraphQL;
+using GraphQL.Execution;
 using GraphQL.Server;
+using GraphQL.SystemTextJson;
 using GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -12,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +35,14 @@ namespace Albellicart
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IDocumentExecuter, DocumentExecuter>();
+            services.AddSingleton<IDocumentWriter, DocumentWriter>();
+            services.AddSingleton<IErrorInfoProvider>(services =>
+            {
+                var settings = services.GetRequiredService<IOptions<GraphQLSettings>>();
+                return new ErrorInfoProvider(new ErrorInfoProviderOptions { ExposeExceptionStackTrace = settings.Value.ExposeExceptions });
+            });
+
             GraphQlDependencies.Map(services);
             AlbelliDependencies.Map(services);
 
@@ -40,6 +52,10 @@ namespace Albellicart
 
             services.AddLogging(builder => builder.AddConsole());
             services.AddHttpContextAccessor();
+
+            // add options configuration
+            services.Configure<GraphQLSettings>(Configuration);
+            services.Configure<GraphQLSettings>(settings => settings.BuildUserContext = ctx => new GraphQLUserContext { User = ctx.User });
 
             services.AddGraphQL(options =>
             {
@@ -63,15 +79,13 @@ namespace Albellicart
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
+            app.UseMiddleware<GraphQLMiddleware>();
 
+            app.UseRouting();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-
-
-            //app.UseGraphQLWebSockers<AlbelliSchema>("/graphql");
 
             // add http for Schema at default url /graphql
             app.UseGraphQL<ISchema>("/graphql");
@@ -81,6 +95,9 @@ namespace Albellicart
                 Path = "/ui/playground",
                 GraphQLEndPoint = "/graphql",
             });
+
+
+            app.UseGraphQLAltair();
         }
     }
 }

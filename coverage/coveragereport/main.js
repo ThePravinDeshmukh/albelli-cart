@@ -224,10 +224,14 @@ var assemblies = [
   {
     "name": "Albellicart",
     "classes": [
-      { "name": "Albellicart.IoC.AlbelliDependencies", "rp": "Albellicart_AlbelliDependencies.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 24, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Albellicart.IoC.GraphQlDependencies", "rp": "Albellicart_GraphQlDependencies.html", "cl": 0, "ucl": 9, "cal": 9, "tl": 27, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.GraphQLMiddleware", "rp": "Albellicart_GraphQLMiddleware.html", "cl": 45, "ucl": 11, "cal": 56, "tl": 91, "ct": "LineCoverage", "mc": "-", "cb": 5, "tb": 10, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.GraphQLRequest", "rp": "Albellicart_GraphQLRequest.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 16, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.GraphQLSettings", "rp": "Albellicart_GraphQLSettings.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 14, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.GraphQLUserContext", "rp": "Albellicart_GraphQLUserContext.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 10, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.IoC.AlbelliDependencies", "rp": "Albellicart_AlbelliDependencies.html", "cl": 6, "ucl": 0, "cal": 6, "tl": 24, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.IoC.GraphQlDependencies", "rp": "Albellicart_GraphQlDependencies.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 27, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Albellicart.Program", "rp": "Albellicart_Program.html", "cl": 0, "ucl": 17, "cal": 17, "tl": 38, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Albellicart.Startup", "rp": "Albellicart_Startup.html", "cl": 0, "ucl": 39, "cal": 39, "tl": 86, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.Startup", "rp": "Albellicart_Startup.html", "cl": 41, "ucl": 9, "cal": 50, "tl": 103, "ct": "LineCoverage", "mc": "-", "cb": 1, "tb": 2, "lch": [], "bch": [], "hc": [] },
     ]},
   {
     "name": "Albellicart.BusinessLogic",
@@ -237,23 +241,23 @@ var assemblies = [
   {
     "name": "Albellicart.Models",
     "classes": [
-      { "name": "Albellicart.Models.AlbellicartContext", "rp": "Albellicart.Models_AlbellicartContext.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 23, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.Models.AlbellicartContext", "rp": "Albellicart.Models_AlbellicartContext.html", "cl": 6, "ucl": 0, "cal": 6, "tl": 23, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Albellicart.Models.Order", "rp": "Albellicart.Models_Order.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 16, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Albellicart.Models.OrderLine", "rp": "Albellicart.Models_OrderLine.html", "cl": 2, "ucl": 2, "cal": 4, "tl": 16, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Albellicart.Models.Product", "rp": "Albellicart.Models_Product.html", "cl": 3, "ucl": 1, "cal": 4, "tl": 17, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Albellicart.Models.Repository.OrderRepository", "rp": "Albellicart.Models_OrderRepository.html", "cl": 0, "ucl": 21, "cal": 21, "tl": 42, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.Models.Repository.OrderRepository", "rp": "Albellicart.Models_OrderRepository.html", "cl": 16, "ucl": 5, "cal": 21, "tl": 42, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Albellicart.Models.Repository.ProductRepository", "rp": "Albellicart.Models_ProductRepository.html", "cl": 14, "ucl": 3, "cal": 17, "tl": 33, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
     ]},
   {
     "name": "Albellicart.Schema",
     "classes": [
-      { "name": "Albellicart.Schema.AlbelliMutation", "rp": "Albellicart.Schema_AlbelliMutation.html", "cl": 16, "ucl": 0, "cal": 16, "tl": 44, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Albellicart.Schema.AlbelliQuery", "rp": "Albellicart.Schema_AlbelliQuery.html", "cl": 12, "ucl": 0, "cal": 12, "tl": 31, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.Schema.AlbelliMutation", "rp": "Albellicart.Schema_AlbelliMutation.html", "cl": 15, "ucl": 0, "cal": 15, "tl": 43, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.Schema.AlbelliQuery", "rp": "Albellicart.Schema_AlbelliQuery.html", "cl": 12, "ucl": 0, "cal": 12, "tl": 29, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Albellicart.Schema.AlbelliSchema", "rp": "Albellicart.Schema_AlbelliSchema.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 15, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Albellicart.Schema.Types.OrderLineInputType", "rp": "Albellicart.Schema_OrderLineInputType.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 22, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Albellicart.Schema.Types.OrderLineType", "rp": "Albellicart.Schema_OrderLineType.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 23, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Albellicart.Schema.Types.OrderType", "rp": "Albellicart.Schema_OrderType.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 21, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Albellicart.Schema.Types.ProductTypeEnum", "rp": "Albellicart.Schema_ProductTypeEnum.html", "cl": 0, "ucl": 9, "cal": 9, "tl": 19, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.Schema.Types.OrderLineInputType", "rp": "Albellicart.Schema_OrderLineInputType.html", "cl": 6, "ucl": 0, "cal": 6, "tl": 22, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.Schema.Types.OrderLineType", "rp": "Albellicart.Schema_OrderLineType.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 24, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.Schema.Types.OrderType", "rp": "Albellicart.Schema_OrderType.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 22, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Albellicart.Schema.Types.ProductTypeEnum", "rp": "Albellicart.Schema_ProductTypeEnum.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 20, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
     ]},
 ];
 

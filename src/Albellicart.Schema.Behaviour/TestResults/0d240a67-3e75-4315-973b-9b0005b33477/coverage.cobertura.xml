@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.21289999999999998" branch-rate="0" version="1.9" timestamp="1619026092" lines-covered="33" lines-valid="155" branches-covered="0" branches-valid="8">
+<coverage line-rate="0.2077" branch-rate="0" version="1.9" timestamp="1619081515" lines-covered="32" lines-valid="154" branches-covered="0" branches-valid="8">
   <sources>
     <source>D:\Code\Git\thepravindeshmukh\albelli-cart\src\</source>
   </sources>
@@ -36,7 +36,7 @@
                 <line number="30" hits="0" branch="False" />
                 <line number="33" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
-                    <condition number="57" type="jump" coverage="0%" />
+                    <condition number="56" type="jump" coverage="0%" />
                   </conditions>
                 </line>
                 <line number="34" hits="0" branch="False" />
@@ -100,7 +100,7 @@
             <line number="30" hits="0" branch="False" />
             <line number="33" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
-                <condition number="57" type="jump" coverage="0%" />
+                <condition number="56" type="jump" coverage="0%" />
               </conditions>
             </line>
             <line number="34" hits="0" branch="False" />
@@ -372,15 +372,15 @@
         </class>
       </classes>
     </package>
-    <package name="Albellicart.Schema" line-rate="0.5322" branch-rate="1" complexity="7">
+    <package name="Albellicart.Schema" line-rate="0.5245000000000001" branch-rate="1" complexity="7">
       <classes>
         <class name="Albellicart.Schema.AlbelliMutation" filename="Albellicart.Schema\AlbelliMutation.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="(Albellicart.BusinessLogic.IOrderLogic)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="25" hits="2" branch="False" />
                 <line number="26" hits="2" branch="False" />
                 <line number="27" hits="2" branch="False" />
+                <line number="28" hits="2" branch="False" />
                 <line number="30" hits="2" branch="False" />
                 <line number="31" hits="2" branch="False" />
                 <line number="32" hits="2" branch="False" />
@@ -390,17 +390,16 @@
                 <line number="36" hits="3" branch="False" />
                 <line number="37" hits="3" branch="False" />
                 <line number="38" hits="2" branch="False" />
-                <line number="39" hits="2" branch="False" />
+                <line number="39" hits="3" branch="False" />
                 <line number="40" hits="3" branch="False" />
-                <line number="41" hits="3" branch="False" />
-                <line number="42" hits="2" branch="False" />
+                <line number="41" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="25" hits="2" branch="False" />
             <line number="26" hits="2" branch="False" />
             <line number="27" hits="2" branch="False" />
+            <line number="28" hits="2" branch="False" />
             <line number="30" hits="2" branch="False" />
             <line number="31" hits="2" branch="False" />
             <line number="32" hits="2" branch="False" />
@@ -410,44 +409,43 @@
             <line number="36" hits="3" branch="False" />
             <line number="37" hits="3" branch="False" />
             <line number="38" hits="2" branch="False" />
-            <line number="39" hits="2" branch="False" />
+            <line number="39" hits="3" branch="False" />
             <line number="40" hits="3" branch="False" />
-            <line number="41" hits="3" branch="False" />
-            <line number="42" hits="2" branch="False" />
+            <line number="41" hits="2" branch="False" />
           </lines>
         </class>
         <class name="Albellicart.Schema.AlbelliQuery" filename="Albellicart.Schema\AlbelliQuery.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="(Albellicart.BusinessLogic.IOrderLogic)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
+                <line number="11" hits="3" branch="False" />
+                <line number="12" hits="3" branch="False" />
                 <line number="13" hits="3" branch="False" />
-                <line number="14" hits="3" branch="False" />
-                <line number="15" hits="3" branch="False" />
-                <line number="18" hits="4" branch="False" />
+                <line number="16" hits="4" branch="False" />
+                <line number="19" hits="3" branch="False" />
+                <line number="20" hits="3" branch="False" />
                 <line number="21" hits="3" branch="False" />
                 <line number="22" hits="3" branch="False" />
                 <line number="23" hits="3" branch="False" />
-                <line number="24" hits="3" branch="False" />
+                <line number="24" hits="4" branch="False" />
                 <line number="25" hits="3" branch="False" />
-                <line number="26" hits="4" branch="False" />
                 <line number="27" hits="3" branch="False" />
-                <line number="29" hits="3" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
+            <line number="11" hits="3" branch="False" />
+            <line number="12" hits="3" branch="False" />
             <line number="13" hits="3" branch="False" />
-            <line number="14" hits="3" branch="False" />
-            <line number="15" hits="3" branch="False" />
-            <line number="18" hits="4" branch="False" />
+            <line number="16" hits="4" branch="False" />
+            <line number="19" hits="3" branch="False" />
+            <line number="20" hits="3" branch="False" />
             <line number="21" hits="3" branch="False" />
             <line number="22" hits="3" branch="False" />
             <line number="23" hits="3" branch="False" />
-            <line number="24" hits="3" branch="False" />
+            <line number="24" hits="4" branch="False" />
             <line number="25" hits="3" branch="False" />
-            <line number="26" hits="4" branch="False" />
             <line number="27" hits="3" branch="False" />
-            <line number="29" hits="3" branch="False" />
           </lines>
         </class>
         <class name="Albellicart.Schema.AlbelliSchema" filename="Albellicart.Schema\AlbelliSchema.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -496,55 +494,54 @@
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="14" hits="0" branch="False" />
                 <line number="15" hits="0" branch="False" />
                 <line number="16" hits="0" branch="False" />
                 <line number="17" hits="0" branch="False" />
-                <line number="19" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
                 <line number="20" hits="0" branch="False" />
                 <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="14" hits="0" branch="False" />
             <line number="15" hits="0" branch="False" />
             <line number="16" hits="0" branch="False" />
             <line number="17" hits="0" branch="False" />
-            <line number="19" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
             <line number="20" hits="0" branch="False" />
             <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Albellicart.Schema.Types.OrderType" filename="Albellicart.Schema\Types\OrderType.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="13" hits="0" branch="False" />
                 <line number="14" hits="0" branch="False" />
                 <line number="15" hits="0" branch="False" />
                 <line number="16" hits="0" branch="False" />
                 <line number="17" hits="0" branch="False" />
                 <line number="18" hits="0" branch="False" />
                 <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="13" hits="0" branch="False" />
             <line number="14" hits="0" branch="False" />
             <line number="15" hits="0" branch="False" />
             <line number="16" hits="0" branch="False" />
             <line number="17" hits="0" branch="False" />
             <line number="18" hits="0" branch="False" />
             <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
           </lines>
         </class>
         <class name="Albellicart.Schema.Types.ProductTypeEnum" filename="Albellicart.Schema\Types\ProductTypeEnum.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="8" hits="0" branch="False" />
                 <line number="9" hits="0" branch="False" />
                 <line number="10" hits="0" branch="False" />
                 <line number="11" hits="0" branch="False" />
@@ -553,11 +550,11 @@
                 <line number="14" hits="0" branch="False" />
                 <line number="15" hits="0" branch="False" />
                 <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="8" hits="0" branch="False" />
             <line number="9" hits="0" branch="False" />
             <line number="10" hits="0" branch="False" />
             <line number="11" hits="0" branch="False" />
@@ -566,6 +563,7 @@
             <line number="14" hits="0" branch="False" />
             <line number="15" hits="0" branch="False" />
             <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
           </lines>
         </class>
       </classes>
